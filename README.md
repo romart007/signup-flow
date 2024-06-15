@@ -1,24 +1,35 @@
-# sign-up-flow
+# Sign-Up Flow
 
-## Project setup
-```
-npm install
-```
+This project is a scaffold for a sign-up flow using Vue.js 2.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Project Setup
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1. Clone the repository:
+    ```bash
+    git clone <repo-url>
+    cd sign-up-flow
+    ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+3. Run the project:
+    ```bash
+    npm run serve
+    ```
+
+## Assumptions
+
+1. Placeholder components are used for form fields, marketing content, and phone number component.
+2. Layout is responsive, adjusting based on screen width.
+3. Specified colors are used in the design.
+
+## Time Spent
+Approximately 5 hours.
+
+## Suggestions
+1. Add validation and interactivity to form fields.
+2. Integrate marketing content dynamically.
+3. Optimize styles/components for better scalability and maintainability.
