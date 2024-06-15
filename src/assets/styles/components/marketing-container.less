@@ -1,0 +1,31 @@
+.marketing-container {
+  width: 100%;
+  background: @light-yellow,;
+  border-radius: 0.625rem;
+  border: 1px solid @bright-yellow;
+  position: relative;
+  flex: 1;
+  min-height: auto;
+  max-width: 100%;
+
+  &::before {
+    bottom: 0;
+    content: '';
+    height:60%;
+    width: 100%;
+    position: absolute;
+    border-radius: inherit;
+    background: linear-gradient(356deg, @bright-yellow, @bright-yellow, 60%, transparent 60%, transparent);
+
+    @media only screen and (min-width: 1280px) {
+      height:45%;
+      background: linear-gradient(342deg, #FFC100, #FFC100, 60%, transparent 60%, transparent);
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    flex:auto;
+    max-width: 500px;
+    min-height: inherit;
+  }
+}

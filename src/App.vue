@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <main class="flex items-center justify-center h-100">
+      <div class="container w-100">
+        <StepIndicator :currentStep="currentStep" :steps="steps" />
+        <div class="content">
+          <FormContainer />
+          <MarketingContainer class="marketing" />
+        </div>
+          <PhoneNumberComponent />
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FormContainer from './components/FormContainer.vue';
+import MarketingContainer from './components/MarketingContainer.vue';
+import PhoneNumberComponent from './components/PhoneNumberComponent.vue';
+import StepIndicator from './components/StepIndicator.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FormContainer,
+    MarketingContainer,
+    PhoneNumberComponent,
+    StepIndicator
+  },
+  data() {
+    return {
+      currentStep: 1,
+      steps: [
+        { number: 1, label: 'Setup An Account' },
+        { number: 2, label: 'Done!' }
+      ]
+    };
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
